@@ -1,5 +1,5 @@
 
-
+// new change
 window.addEventListener('keypress', function (e) {
     const guess = String.fromCharCode(e.charCode)
     if (hangman1.status === 'Playing') {
