@@ -1,4 +1,4 @@
-
+// new change
 const tipper = (tipPct) => {
     return (amount) => {
         return amount * tipPct
