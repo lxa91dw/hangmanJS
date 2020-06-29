@@ -1,4 +1,4 @@
-
+// new change
 const wordList = ['lemonade', 'new jersey', 'javascript', 
 'cheerleading', 'lake hopatcong', 'This is my new Hangman game', 
 'telescope', 'rainy days', 'flowers', 'tranquility', 'philadelphia',
