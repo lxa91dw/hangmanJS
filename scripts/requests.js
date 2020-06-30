@@ -2,7 +2,7 @@
 
 const getPuzzle = async (wordCount) => {
 
-    const response = await fetch(`http://puzzle.mead.io/puzzle?wordCount=${wordCount}`, {})
+    const response = await fetch(`//puzzle.mead.io/puzzle?wordCount=${wordCount}`, {})
     if (response.status === 200) {
         const data = await response.json()
         return data.puzzle
@@ -13,7 +13,7 @@ const getPuzzle = async (wordCount) => {
 
 
 const getLocation = async () => {
-    const response = await fetch('https://ipinfo.io/json?token=c3790e1246b933', {})
+    const response = await fetch('//ipinfo.io/json?token=c3790e1246b933', {})
     if (response.status === 200) {
         const data = await response.json()
         return data 
@@ -24,7 +24,7 @@ const getLocation = async () => {
 
 
 const getCountryDetails = async (countryCode) => {
-    const response = await fetch('http://restcountries.eu/rest/v2/all', {})
+    const response = await fetch('//restcountries.eu/rest/v2/all', {})
     if (response.status === 200) {
         const data = await response.json()
         return data
@@ -45,7 +45,7 @@ const getCountryDetails = async (countryCode) => {
 //         }
 //     })
     
-//     request.open('GET', 'http://restcountries.eu/rest/v2/all')
+//     request.open('GET', '//restcountries.eu/rest/v2/all')
 //     request.send()
 
 // })
@@ -63,7 +63,7 @@ const getCountryDetails = async (countryCode) => {
 //         }
 //     })
     
-//     request.open('GET', `http://puzzle.mead.io/puzzle?wordCount=${wordCount}`)
+//     request.open('GET', `//puzzle.mead.io/puzzle?wordCount=${wordCount}`)
 //     request.send()
     
 // })
