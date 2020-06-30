@@ -1,9 +1,15 @@
-// new change
-const wordList = ['lemonade', 'new jersey', 'javascript', 
-'cheerleading', 'lake hopatcong', 'This is my new Hangman game', 
-'telescope', 'rainy days', 'flowers', 'tranquility', 'philadelphia',
-'laptop', 'pitbull terrier', 'jefferson', 'life is awesome', 
-'summertime', 'vacation', 'jetski', 'lake life is good' ]
+// This file contains the main code for our Hangman game.
+
+const wordList = ['lemonade', 'new jersey', 'Driving Permit', 
+'cheerleading', 'lake hopatcong', 'fishing', 'This is my new Hangman game', 
+'telescope', 'rainy days', 'flowers', 'tranquility', 'barbecue',
+'hot dogs and hamburgers', 'pitbull terrier', 'jefferson', 'life is awesome', 
+'summertime', 'vacation', 'jetski', 'lake life is good', 'Corona Virus',
+'Nolans Point Buoy' ]
+
+const imageList = ['/images/Hangman-6.png','/images/Hangman-5.png','/images/Hangman-4.png', 
+'/images/Hangman-3.png','/images/Hangman-2.png','/images/Hangman-1.png','/images/Hangman-0.png', 
+'/images/happy-face.png', '/images/thumbs-up.png', '/images/thumbs-down.png']
 
 class Hangman {
     constructor (word, guesses) {
@@ -11,6 +17,7 @@ class Hangman {
         this.remainingGuesses = guesses 
         this.guessedLetters = []
         this.status = 'Playing'
+        this.gameType = 'Lake Related Puzzle'
 }
 
 get statusMessage() {
@@ -20,6 +27,7 @@ get statusMessage() {
 
     if (this.remainingGuesses < 1) {
         this.status = `Failed. Nice try, the word was "${this.word.join('')}"`
+        setLosingImage()
     } else {
         this.word.forEach((letter) => {
         // Finished if all letters in word are shown
@@ -32,6 +40,7 @@ get statusMessage() {
         }) 
         if (finished === true) {
             this.status = 'Finished, you are a winner!'
+            setWinningImage()
         } else {
             this.status = 'Playing'
         }
